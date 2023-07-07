@@ -18,7 +18,8 @@ release: CFLAGS = -Iinclude -O2
 release: new
 
 $(BIN): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@.js
+	$(CC) $(CFLAGS) $(OBJS) -o $@.player.js
+	copy $(SRC)\$(PROJNAME).js $(BINDIR)\$(PROJNAME).js
 
 $(OBJ)/%.o: $(SRC)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
