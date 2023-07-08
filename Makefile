@@ -20,6 +20,7 @@ release: new
 $(BIN): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $@.player.js
 	copy $(SRC)\$(PROJNAME).js $(BINDIR)\$(PROJNAME).js
+	copy $(SRC)\icons.svg $(BINDIR)\icons.svg
 
 $(OBJ)/%.o: $(SRC)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
